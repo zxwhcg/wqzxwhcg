@@ -1,0 +1,16 @@
+import requests
+import json
+import time
+
+url='https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=3e87df78-4193-4fdd-bdaa-a1b3229a1605'
+
+obj={
+"msgtype":"text",
+"text":{
+"content":'测试'
+}
+}
+requests.post(url,
+headers={'conten-type':'application/json'},
+data=json.dumps(obj)
+)
